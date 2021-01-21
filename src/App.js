@@ -11,8 +11,16 @@ class App extends Component {
   textListener = (event) => {
     this.setState({userInput: event.target.value});
   }
+
+  letterHandler = (event) => {
+      this.state.userInput.split('') 
+  }
   
   render() {
+    const charList = this.state.userInput.split('').map((ch, index) => {
+      return <CharComponent character={ch} key={index} />;
+    });
+
     return (
       <div>
         <input 
@@ -24,7 +32,7 @@ class App extends Component {
         </p>
         <ValidationComponent 
         length={this.state.userInput.length} />
-        <CharComponent />
+        {charList}
       </div>
     )
   }

@@ -1,10 +1,10 @@
 import React from 'react';
 import './Char.css';
 
-const char = () => {
+const char = (props) => {
     return (
         <div className="Char">
-
+            {props.character}
         </div>
     )
 }
