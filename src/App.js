@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+import ValidationComponent from './components/ValidationComponent';
 
 class App extends Component {
   state = {
-    userInput: ''
+    userInput: '',
   }
   
   textListener = (event) => {
@@ -20,6 +21,8 @@ class App extends Component {
         <p>
           {this.state.userInput}
         </p>
+        <ValidationComponent 
+        length={this.state.userInput.length} />
       </div>
     )
   }
