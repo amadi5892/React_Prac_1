@@ -4,7 +4,7 @@ import ValidationComponent from './components/ValidationComponent';
 
 class App extends Component {
   state = {
-    userInput: '',
+    userInput: ''
   }
   
   textListener = (event) => {
